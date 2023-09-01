@@ -4,5 +4,5 @@ import { processImage } from '../../controllers/imagesConroller';
 
 const imagesRoutes = express.Router();
 
-imagesRoutes.get('', checkImageQuery, processImage );
+imagesRoutes.get('', checkImageQuery, processImage);
 export default imagesRoutes;

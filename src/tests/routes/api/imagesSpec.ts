@@ -3,7 +3,6 @@ import app from '../../../index';
 
 const request = supertest(app);
 describe('Test images endpoint', () => {
-  
   describe('Test /images endpoint with valid query', () => {
     it('should return status 200', async () => {
       const response = await request.get(

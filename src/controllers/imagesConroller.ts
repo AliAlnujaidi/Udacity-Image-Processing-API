@@ -30,9 +30,7 @@ export const processImage = async (
   );
 
   //check if the thumbnail image exists
-  const thumbImageExists = await checkThumbImageExists(
-    thumbPath,
-  );
+  const thumbImageExists = await checkThumbImageExists(thumbPath);
 
   // if it exists, send it to the client
   if (thumbImageExists) {
@@ -51,9 +49,7 @@ export const processImage = async (
   }
 };
 
-export async function checkThumbImageExists(
-  thumbPath: string,
-) {
+export async function checkThumbImageExists(thumbPath: string) {
   try {
     await fs.access(thumbPath);
     return true;
