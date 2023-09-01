@@ -16,6 +16,9 @@ export const checkImageQuery = (
   if (isNaN(Number(width)) || isNaN(Number(height))) {
     return res.status(400).send('width and height must be a number');
   }
+  if(Number(width) < 1 || Number(height) < 1) {
+    return res.status(400).send('width and height must be greater than 0');
+  }
   next();
 };
 export default checkImageQuery;
