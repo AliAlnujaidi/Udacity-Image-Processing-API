@@ -15,7 +15,7 @@ export const processImage = async (
   const { filename, height, width } = req.query;
 
   const originalPath = path.join('assets', 'full', `${filename}.jpg`);
-  
+
   const thumbPath = path.join(
     'assets',
     'thumb',
